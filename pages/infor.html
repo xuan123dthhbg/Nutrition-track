@@ -5,8 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông tin dinh dưỡng</title>
     <link rel="stylesheet" href="../css/infor.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="Chart.min.js"></script>
 </head>
 <body>
+    <div class="header grid-container">
+        <a href="../index.html">
+            <div class="header-img"></div></a>
+        <button class="about btn">Giới thiệu</button>
+        <form href="./pages/login.html">
+            <button class="login btn">Đăng nhập</button>
+        </form>
+        <form href="./pages/register.html">
+            <button class="register btn">Đăng ký</button>
+        </form>
+    </div>
+    <div class="home">
+        <form action="" class="search-bar">
+            <input type="text" placeholder="Tìm kiếm" class="search">
+            <a href="./pages/result.html">
+                <button type="submit" class="search-icon">Tìm kiếm</button>
+            </a>
+        </form>
+
+        <div class="food">
+            <div class="food-img"></div>
+            <div class="food-name">Dưa chuột</div>
+        </div><br><br>
+
+        <div class="infor">
+            <div class="nutrition">
+                <div class="mess-title">Thông tin dinh dưỡng trong 100g</div>
+                <div class="nutrition-facts">
+                    <div class="calories">Calories: 100KCal</div>
+                        <div class="w3-container table">
+                        <table class="w3-table">
+                          <tr>
+                            <td>Total Fat</td>
+                            <td>20g</td>
+                          </tr>
+                          <tr>
+                            <td>Cholesterol</td>
+                            <td>10mg</td>
+                          </tr>
+                          <tr>
+                            <td>Sodium</td>
+                            <td>50mg</td>
+                          </tr>
+                          <tr>
+                            <td>Protein</td>
+                            <td>20g</td>
+                          </tr>
+                          <tr>
+                            <td>Total Carbohyrate</td>
+                            <td>30g</td>
+                          </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="activities">
+                <div class="activities-title">Hoạt động cần thiết để tiêu hao 100KCal</div>
+                <table class="activities">
+                    <tr>
+                        <th class="cycling-box">
+                          <div class="cycling"></div>
+                        </th>
+                        <th class="running-box">
+                        <div class="running"></div>
+                        </th>
+                        <th class="dohousehold-box">
+                            <div class="dohousehold"></div>
+                        </th>
+                    <tr>
+                        <td>
+                            <div style="font-size: 70px; font-weight: bold;">5</div> <br>
+                            <div style="font-weight: bold; font-size: 25px;">Đạp xe</div>
+                        </td>
+                        <td>
+                            <div style="font-size: 70px; font-weight: bold;">5</div> <br>
+                            <div style="font-weight: bold; font-size: 25px;">Chạy bộ</div>
+                        </td>
+                        <td>
+                            <div style="font-size: 70px; font-weight: bold;">5</div> <br>
+                            <div style="font-weight: bold; font-size: 25px;">Làm việc nhà</div>
+                        </td>
+                    </tr>
+
+                </table> <br>
+                <div style="font-style: italic; font-size: 15px">Giá trị ước tính dành cho người nặng 63.5kg</div>
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
