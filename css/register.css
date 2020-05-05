@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: 'Opensan';
+}
+@font-face {
+    font-family: Opensan;
+    src: url(../font/OpenSans-Bold.ttf);
+}
+.header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+}
+
+.header-img {
+    margin: 15px;
+    margin-left: 100px;
+    margin-right: 1000px;
+    height: 80px;
+    width: 250px;
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 0px;
+    background-color: rgb(86, 226, 128);
+    padding: 0px;
+    opacity: 0.9;
+  }
+
+  .btn {
+      margin-top: 25px;
+      text-align: center;
+      border: none;
+      font-size: 20px;
+      height: 60px;
+      width: 200px;
+  }
+
+  .btn:hover{
+      background-color: rgb(44, 165, 60);
+      cursor: pointer;
+  }
+
+.register-box{
+    width: 500px;
+    height: 650px;
+    background: rgba(79, 114, 160, 0.301);
+    
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 25px 35px;
+    margin-top: 50px;
+    border-radius: 15px;
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(37, 78, 97);
+}
+
+.register-box p{
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: rgb(45, 78, 94);
+}
+.register-box input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.register-box input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid rgb(29, 9, 9);
+    background: transparent;
+    height: 50px;
+    color: rgb(15, 10, 10);
+    font-size: 16px;
+}
+.register-box input[type="submit"]
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #89b8da;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.register-box input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #58dd8d;
+    color: #000;
+}
