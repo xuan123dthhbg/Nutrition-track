@@ -4,7 +4,7 @@ back-end: MySQL database, php.
 Chương trình tạo web server :XAMPP.
     Sau khi cài Xampp .Vào xampp\xampp-control nhấn Start cho Apache và MySQL để khởi động Webserver.
         
-    Sau khikhi Clone về để ở vị trí  .\xampp\htdocs\
+    Sau khi Clone về để ở vị trí  .\xampp\htdocs\
 Ví dụ https://localhost/Nutrition-tracktrack
 Run :https://localhost/tenthumuc
 
