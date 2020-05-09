@@ -9,7 +9,7 @@ Chương trình tạo web server :XAMPP.
         
     Sau khi Clone về để ở vị trí  .\xampp\htdocs\
 Ví dụ https://localhost/Nutrition-tracktrack
-Run :https://localhost/tenthumuc
+Run :https://localhost/Nutrition-tracktrack 
 
 Cơ sở dữ liệu:http://localhost/phpmyadmin/db_structure.php?server=1&db=quanlidinhduongthucpham (đang cập nhật dần dần)
 
