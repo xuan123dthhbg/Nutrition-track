@@ -23,10 +23,11 @@
     <div class="home">
         <div class="home-header"></div>
         
-        <form action="" class="search-pos">
+        <form action="./search/phpSearch.php" method="post" class="search-pos">
             <div class="search-bar">
-                <input type="text" placeholder="Tìm kiếm" class="search">
-                <a href="./pages/result.html">
+             Search <input type="text" placeholder="Tìm kiếm" class="search"><br>
+             Column: <select name ="column">
+                 <option value ="Maloai">Ma loai</option>
                     <button type="submit" class="search-icon">Tìm kiếm</button>
                 </a>
             </div>
