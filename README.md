@@ -1,4 +1,5 @@
 Type name of the food or drink, we will show you nutrition facts of them.
+
 front-end: HTML5, CSS3, Javascript, Bootstrap 4.
 back-end: MySQL database, php.
 Chương trình tạo web server :XAMPP.
@@ -8,5 +9,5 @@ Chương trình tạo web server :XAMPP.
 Ví dụ https://localhost/Nutrition-tracktrack
 Run :https://localhost/tenthumuc
 
-Cơ sở dữ liệu:http://localhost/phpmyadmin/db_structure.php?server=1&db=quanlidinhduongthucpham (đang cập nhật dầndần)
+Cơ sở dữ liệu:http://localhost/phpmyadmin/db_structure.php?server=1&db=quanlidinhduongthucpham (đang cập nhật dần dần)
 
