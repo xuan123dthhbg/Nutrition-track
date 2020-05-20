@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="header grid-container">
-        <a href="./index.html">
+        <a href="./index.php">
             <div class="header-img"></div></a>
         <button class="about btn">Giới thiệu</button>
-        <a href="./pages/login.html">
+        <a href="./pages/login.php">
             <button class="login btn">Đăng nhập</button>
         </a>
-        <a href="./pages/register.html">
+        <a href="./pages/register.php">
             <button class="register btn">Đăng ký</button>
         </a>
     </div>
@@ -23,16 +23,15 @@
     <div class="home">
         <div class="home-header"></div>
         
-        <form action="./search/phpSearch.php" method="post" class="search-pos">
+        <form action="./pages/result.php" method="post" class="search-pos" >
             <div class="search-bar">
-             Search <input type="text" placeholder="Tìm kiếm" class="search"><br>
-             Column: <select name ="column">
-                 <option value ="Maloai">Ma loai</option>
-                    <button type="submit" class="search-icon">Tìm kiếm</button>
-                </a>
-            </div>
-        </form>
-        
+             <input type="text" placeholder="Tìm kiếm"  class="search"  name="searcht">
+            
+            <button type="submit" class="search-icon">Tìm kiếm</button>
+       
+    </div>
+            </form>
+
         <h1 class="message">
             Dinh dưỡng hợp lý là nền tảng của sức khỏe, tầm vóc và trí tuệ!
         </h1>
