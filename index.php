@@ -23,16 +23,15 @@
     <div class="home">
         <div class="home-header"></div>
         
-        <form action="./search/phpSearch.php" method="post" class="search-pos">
+        <form action="./pages/result.php" method="post" class="search-pos" >
             <div class="search-bar">
-             Search <input type="text" placeholder="Tìm kiếm" class="search"><br>
-             Column: <select name ="column">
-                 <option value ="Maloai">Ma loai</option>
-                    <button type="submit" class="search-icon">Tìm kiếm</button>
-                </a>
-            </div>
-        </form>
-        
+             <input type="text" placeholder="Tìm kiếm"  class="search"  name="searcht">
+            
+            <button type="submit" class="search-icon">Tìm kiếm</button>
+       
+    </div>
+            </form>
+
         <h1 class="message">
             Dinh dưỡng hợp lý là nền tảng của sức khỏe, tầm vóc và trí tuệ!
         </h1>

@@ -1,3 +1,25 @@
+<?php
+              $resultt = $_GET['resultt'];
+              $servername = 'localhost';
+              $username = 'root';
+              $password = '';
+              $db = 'test';
+
+              $conn = new mysqli($servername, $username, $password, $db);
+
+              if ($conn->connect_error){
+	             die("Connection failed: ". $conn->connect_error);
+                }
+
+               $sql = "select * from data where Maten like '%$resultt%'";
+
+                $result = $conn->query($sql);
+                $conn->close();
+                if ($result->num_rows > 0){
+                  
+                    While( $row = $result -> fetch_array()){
+ 
+             ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,36 +57,32 @@
 
         <div class="food">
             <div class="food-img"></div>
-            <div class="food-name">Dưa chuột</div>
+            <div class="food-name"><?php echo $row["Tenmon"] ?> </div>
         </div><br><br>
 
         <div class="infor">
             <div class="nutrition">
                 <div class="mess-title">Thông tin dinh dưỡng trong 100g</div>
                 <div class="nutrition-facts">
-                    <div class="calories">Calories: 100KCal</div>
-                        <div class="w3-container table">
+                    <div class="calories">Giá trị dinh dưỡng </div>
+                        <div  class="w3-container table" >
                         <table class="w3-table">
-                          <tr>
-                            <td>Total Fat</td>
-                            <td>20g</td>
-                          </tr>
-                          <tr>
-                            <td>Cholesterol</td>
-                            <td>10mg</td>
-                          </tr>
-                          <tr>
-                            <td>Sodium</td>
-                            <td>50mg</td>
-                          </tr>
-                          <tr>
-                            <td>Protein</td>
-                            <td>20g</td>
-                          </tr>
-                          <tr>
-                            <td>Total Carbohyrate</td>
-                            <td>30g</td>
-                          </tr>
+                       
+                     <?php 
+                     echo 
+                     '<p>'."Calories:". $row["Calories/100g"].".".'</p>'.
+                     '<p>'."Total Fat :". $row["TotalFat(g)"] ." g.".'</p>'.
+                     '<p>'."Cholesterol:". $row["Cholesterol(mg)"] ." mg".'</p>'.
+                     '<p>'."Sodium :". $row["Sodium(g)"] ." g.".'</p>'.
+                     '<p>'."Total Carbohydrates :". $row["TotalCarbohydrates"] ." g.".'</p>'.
+                     '<p>'. "Protein:".$row["Protein(g)"] ." g.".
+                     '</p>'
+                          
+                          
+                     ;}
+                        }
+                ?>
+                         
                         </table>
                     </div>
                 </div>
