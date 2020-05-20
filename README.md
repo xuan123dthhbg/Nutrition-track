@@ -8,5 +8,4 @@ Chương trình tạo web server :XAMPP.
 Ví dụ https://localhost/Nutrition-tracktrack
 Run :https://localhost/Nutrition-tracktrack
 
-Cơ sở dữ liệu:http://localhost/phpmyadmin/db_structure.php?server=1&db=quanlidinhduongthucpham (đang cập nhật dần)
-
+Cơ sở dữ liệu
