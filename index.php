@@ -9,13 +9,13 @@
 </head>
 <body>
     <div class="header grid-container">
-        <a href="./index.html">
+        <a href="./index.php">
             <div class="header-img"></div></a>
         <button class="about btn">Giới thiệu</button>
-        <a href="./pages/login.html">
+        <a href="./pages/login.php">
             <button class="login btn">Đăng nhập</button>
         </a>
-        <a href="./pages/register.html">
+        <a href="./pages/register.php">
             <button class="register btn">Đăng ký</button>
         </a>
     </div>

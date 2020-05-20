@@ -32,13 +32,13 @@ if ($conn->connect_error){
 </head>
 <body>
     <div class="header grid-container">
-        <a href="../index.html">
+        <a href="../index.php">
             <div class="header-img"></div></a>
         <button class="about btn">Giới thiệu</button>
-        <form href="./pages/login.html">
+        <form href="./pages/login.php">
             <button class="login btn">Đăng nhập</button>
         </form>
-        <form href="./pages/register.html">
+        <form href="./pages/register.php">
             <button class="register btn">Đăng ký</button>
         </form>
     </div>
