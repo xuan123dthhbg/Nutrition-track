@@ -86,8 +86,8 @@ body {
     border: none;
     outline: none;
     height: 40px;
-    background: #89b8da;
-    color: #fff;
+    background: navajowhite;
+    color: #111111;
     font-size: 20px;
     border-radius: 15px;
 }
@@ -95,7 +95,7 @@ body {
 {
     cursor: pointer;
     background: #58dd8d;
-    color: #000;
+    color: #111111;
 }
 .user-infor input[type="radio"]{
     margin: 5px;
