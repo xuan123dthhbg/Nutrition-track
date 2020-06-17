@@ -28,7 +28,7 @@
                 <p>Mật khẩu</p>
                 <input type="password" name="password" placeholder="Nhập mật khẩu">
                 <input type="submit" name="submit" value="Đăng ký">
-                <p style="text-align: center; font-size: 16px;">Đã có tài khoản? <a href="./login.html">Đăng nhập ngay!</a></p>
+                <p style="text-align: center; font-size: 16px;">Đã có tài khoản? <a href="./login.php">Đăng nhập ngay!</a></p>
             </form>
         </div>
     </div>

@@ -18,6 +18,7 @@
     </div>
 
     <div class="home-body">
+
         <div class="login-box">
             <h1>Đăng nhập</h1>
             <form>
@@ -27,7 +28,7 @@
                 <p>Mật khẩu</p>
                 <input type="password" name="password" placeholder="Nhập mật khẩu">
                 <input type="submit" name="submit" value="Đăng nhập">
-                <p style="text-align: center; font-size: 16px;">Chưa có tài khoản? <a href="./register.html">Đăng ký tại đây</a></p>
+                <p style="text-align: center; font-size: 16px;">Chưa có tài khoản? <a href="./register.php">Đăng ký tại đây</a></p>
             </form>
         </div>
     </div>

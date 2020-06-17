@@ -78,6 +78,7 @@ body {
   width: 100%;
   background-image: url(../img/spinach_scaled.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .message {
