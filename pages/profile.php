@@ -19,28 +19,26 @@
             <button class="logout btn">Đăng xuất</button>
         </a>
     </div>
-    <div class="home-body">
-        <div class="infor-bar">
-            <div class="avt">
-                <img src="../img/avatar.png" style="width: 200px; height: 200px">
-            </div>
-            <div class="infor-index">
-                <p style="font-weight: bolder; font-size: 30px; border-bottom: #111111 5px solid; margin-left: 50px">Username</p>
-                <table style="width: 100%; font-size: 20px">
-                    <tr>
-                        <th>Chiều cao</th>
-                        <th>Cân nặng</th>
-                        <th>BMI</th>
-                        <th>TDEE</th>
-                    </tr>
-                     <tr align="center">
-                         <td>159cm</td>
-                         <td>56kg</td>
-                         <td>21.9</td>
-                         <td>1800KCal</td>
-                     </tr>
-                </table>
-            </div>
+    <div class="infor-bar">
+        <div class="avt">
+            <img src="../img/avatar.png" style="width: 200px; height: 200px">
+        </div>
+        <div class="infor-index">
+            <p style="font-weight: bolder; font-size: 30px; border-bottom: #111111 5px solid; margin-left: 50px">Username</p>
+            <table style="width: 100%; font-size: 20px">
+                <tr>
+                    <th>Chiều cao</th>
+                    <th>Cân nặng</th>
+                    <th>BMI</th>
+                    <th>TDEE</th>
+                </tr>
+                 <tr align="center">
+                     <td>159cm</td>
+                     <td>56kg</td>
+                     <td>21.9</td>
+                     <td>1800KCal</td>
+                 </tr>
+            </table>
         </div>
     </div>
     <div class="w3-row profile-body">
@@ -66,6 +64,13 @@
                 </div>
             </div>
             <div class="aim">Mục Tiêu</div>
+            <div class="user-aim">
+                <p>Cân nặng: 59kg</p>
+                <p>Năng lượng hàng ngày: 1200Kcal</p>
+                <p>Protein: 50%</p>
+                <p>Fat: 20%</p>
+                <p>Carbohydtares: 30%</p>
+            </div>
         </div>
         <div class="w3-col body-right" style="width: 20%"></div>
     </div>

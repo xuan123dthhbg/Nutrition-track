@@ -71,7 +71,7 @@ body {
 .diary, .aim {
     font-size: 30px;
     font-weight: bolder;
-    margin: 20px;
+    margin: 30px;
     border-bottom: #0b2e13 5px solid;
 }
 
@@ -83,6 +83,14 @@ body {
 .breakfast, .lunch, .snack, .dinner {
     margin: 30px;
     border-bottom: #1c7430 2px solid;
+}
+.user-aim {
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 75px;
+}
+.user-aim p{
+    border-bottom: #1e7e34 2px solid;
 }
 
 
