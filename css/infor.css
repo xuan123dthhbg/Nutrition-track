@@ -7,9 +7,7 @@ body {
     src: url(../font/OpenSans-Bold.ttf);
 }
 .header {
-    display: flex;
-    position: fixed;
-    width: 100%;
+  
 }
 
 .header-img {
@@ -22,9 +20,7 @@ body {
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 0px;
+   
     background-color: rgb(86, 226, 128);
     padding: 0px;
     opacity: 0.9;
@@ -50,7 +46,7 @@ body {
     background-color: rgb(196, 235, 209);
 }
 .home-header {
-    height: 200px;
+    height: 30px;
     width: 100%;
 }
 .search-pos {
@@ -59,10 +55,10 @@ body {
 }
 .search-bar {
     margin: auto;
-    width: 720px;
+    width: 750px;
 }
 .search {
-    width: 600px;
+    width: 500px;
     padding: 10px;
     border-radius: 20px;
     font-size: 20px;
@@ -92,7 +88,7 @@ body {
   .food-img {
       height: 100%;
       width: 200px;
-      background-image: url(../img/cucumber.jpg);
+     
       background-repeat: no-repeat;
       background-size: cover;
       border-radius: 20px 0 0 20px;
@@ -107,6 +103,7 @@ body {
   .infor {
       font-size: 20px;
       height: 60px;
+     
       margin-top: 50px;
       display: flex;
   }
@@ -119,13 +116,14 @@ body {
   }
 
   .nutrition {
-      height: 400px;
-      width: 40%;
+      height: auto;
+      width:auto;
+      margin-left: 100px;
   }
 
   .nutrition-facts {
-      height: 100%;
-      width: 80%;
+      height:auto;
+      width: auto;
       border: #000 solid 2px;
       margin: auto;
   }
@@ -183,3 +181,9 @@ body {
       background-size: cover;
   }
 
+   .chart{
+    margin-top: 50px;
+    height: auto;
+    width:auto;
+   
+}
