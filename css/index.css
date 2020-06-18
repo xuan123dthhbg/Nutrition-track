@@ -14,9 +14,6 @@ body {
   font-family: Opensan;
   src: url(../font/OpenSans-Bold.ttf);
 }
-.header {
- 
-}
 
 .home-header {
   height: 150px;
@@ -82,7 +79,6 @@ body {
 .home {
   height: 1250px;
   width: 100%;
-
 }
 
 .message {

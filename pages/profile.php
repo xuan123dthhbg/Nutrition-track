@@ -6,6 +6,8 @@
     <title>Thông tin dinh dưỡng</title>
     <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
     <div class="header grid-container">
@@ -23,7 +25,7 @@
                 <img src="../img/avatar.png" style="width: 200px; height: 200px">
             </div>
             <div class="infor-index">
-                <p style="font-weight: bolder; font-size: 30px; border-bottom: #111111 5px solid">Username</p>
+                <p style="font-weight: bolder; font-size: 30px; border-bottom: #111111 5px solid; margin-left: 50px">Username</p>
                 <table style="width: 100%; font-size: 20px">
                     <tr>
                         <th>Chiều cao</th>
@@ -39,15 +41,33 @@
                      </tr>
                 </table>
             </div>
-
         </div>
-
-        <div class="menu">
-            <a href="userInfor.html"><button class="menu-btn">Chỉnh sửa hồ sơ</button></a> <br>
-            <button class="menu-btn">Nhật ký của tôi</button> <br>
-            <button class="menu-btn">Mục tiêu</button> <br>
-            <button class="menu-btn">Đăng xuất</button> <br>
+    </div>
+    <div class="w3-row profile-body">
+        <div class="w3-col body-left" style="width: 20%"></div>
+        <div class="w3-col body-center" style="width: 60%">
+            <div class="diary">Nhật ký</div>
+            <div class="food-log">
+                <div class="breakfast">
+                    Bữa sáng
+                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
+                </div>
+                <div class="lunch">
+                    Bữa trưa
+                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
+                </div>
+                <div class="snack" style="display: flex">
+                    Bữa phụ
+                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
+                </div>
+                <div class="dinner" style="display: flex">
+                    Bữa tối
+                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
+                </div>
+            </div>
+            <div class="aim">Mục Tiêu</div>
         </div>
+        <div class="w3-col body-right" style="width: 20%"></div>
     </div>
 </body>
 </html>

@@ -50,30 +50,39 @@ body {
     position: absolute;
 }
 .avt {
-    margin-left: 300px;
+    margin-left: 370px;
 }
 .infor-index{
     margin-left: 50px;
     width: 700px;
 }
-.home-body {
-    display: inline-block;
-}
-
-.menu {
+.profile-body {
     margin-top: 250px;
 }
-.menu-btn {
-    margin-left: 300px;
-    width: 1000px;
-    border: none;
-    height: 70px;
+.body-left, .body-right{
+    background-image: url("../img/background2.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.body-center {
+    background-color: whitesmoke;
+    height: 100vh;
+}
+.diary, .aim {
+    font-size: 30px;
+    font-weight: bolder;
+    margin: 20px;
+    border-bottom: #0b2e13 5px solid;
 }
 
-.menu-btn:hover {
-    cursor: pointer;
-    background-color: darkseagreen;
-    color: white;
-    border: none;
+.food-log {
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 50px;
 }
+.breakfast, .lunch, .snack, .dinner {
+    margin: 30px;
+    border-bottom: #1c7430 2px solid;
+}
+
 
