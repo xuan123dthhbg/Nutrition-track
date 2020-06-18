@@ -1,4 +1,6 @@
+<?php ?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -18,9 +20,9 @@
     </div>
 
     <div class="home-body">
-        <div class="register-box">
+        <div class="register-box " >
             <h1>Đăng ký</h1>
-            <form method="post" action="register_action.php" >
+            <form method="post" action="./register_action.php" >
                 <p>Họ tên</p>
                 <input type="text" name="name" placeholder="Nhập họ và tên" required>
                 <p>Tên đăng nhập</p>
@@ -28,13 +30,10 @@
                 <p>Mật khẩu</p>
                 <input type="password" name="password" placeholder="Nhập mật khẩu"  required>
                 <input type="submit" name="submit" value="Đăng ký">
-
-              
-               
-
-                <p style="text-align: center; font-size: 16px;">Đã có tài khoản? <a href="./login.php">Đăng nhập ngay!</a></p>
+           <p style="text-align: center; font-size: 16px;">Đã có tài khoản? <a href="./login.php">Đăng nhập ngay!</a></p>
 
             </form>
+         
         </div>
         
     </div>
