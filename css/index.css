@@ -1,24 +1,30 @@
 body {
   margin: 0;
   font-family: "Opensan";
+  background: url(../img/spinach_scaled.jpg);
+  background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        height:100%;
 }
 @font-face {
   font-family: Opensan;
   src: url(../font/OpenSans-Bold.ttf);
 }
 .header {
-  display: flex;
-  position: fixed;
-  width: 100%;
+ 
 }
 
 .home-header {
-  height: 200px;
+  height: 150px;
   width: 100%;
 }
 .search-pos {
   height: 100px;
-  width: 100%;
+  
 }
 .search-bar {
   margin: auto;
@@ -51,14 +57,14 @@ body {
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 0px;
   background-color: rgb(86, 226, 128);
   padding: 0px;
   opacity: 0.9;
 }
-
+.about{
+  margin:20px; 
+  
+}
 .btn {
   margin-top: 25px;
   text-align: center;
@@ -76,9 +82,7 @@ body {
 .home {
   height: 1250px;
   width: 100%;
-  background-image: url(../img/spinach_scaled.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+
 }
 
 .message {
@@ -86,7 +90,7 @@ body {
   opacity: 0.6;
   position: absolute;
   margin-left: 150px;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-right: 120px;
   font-size: 70px;
   text-align: center;
