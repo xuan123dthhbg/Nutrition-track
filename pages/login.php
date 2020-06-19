@@ -27,7 +27,7 @@ if ($mat_khau != $row["mat_khau"]) {
     exit;
 }
 $_SESSION['ten_dang_nhap'] = $ten_dang_nhap;
-echo "Xin chào " . $ten_dang_nhap . ". Bạn đã đăng nhập thành công. <a href='/'>Về trang chủ</a>";
+echo "Xin chào " . $ten_dang_nhap . ". Bạn đã đăng nhập thành công. <a href='../index.php'>Tiếp tục</a>";
 die();
 }
 ?>
@@ -38,10 +38,16 @@ die();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông tin dinh dưỡng</title>
     <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   
+    
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <div class="header grid-container container-fluid" >
+<div class="header grid-container container-fluid" >
         <nav class="navbar navbar-expand-sm navbar-light ">
             <a  class="navbar-brand" href="../index.php">
             <img src="../img/logo.png" alt="logo" >
@@ -51,14 +57,14 @@ die();
             </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent"> </div>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
+             
               <li class="nav-item ">
                 <a class="nav-link active btn " href="#">Giới thiệu  </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link  active btn " href="register.php">Đăng kí </a>
               </li>
-
+             
             </ul>
         </nav> 
 </div>
