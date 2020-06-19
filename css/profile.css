@@ -44,10 +44,9 @@ body {
 .infor-bar {
     height: 250px;
     width: 100%;
-    background-color:#56E280;
+    background-color: rgb(86, 226, 128);
     opacity: 0.9;
     display: flex;
-    position: absolute;
 }
 .avt {
     margin-left: 370px;
@@ -56,9 +55,6 @@ body {
     margin-left: 50px;
     width: 700px;
 }
-.profile-body {
-    margin-top: 250px;
-}
 .body-left, .body-right{
     background-image: url("../img/background2.png");
     background-repeat: no-repeat;
@@ -66,7 +62,7 @@ body {
 }
 .body-center {
     background-color: whitesmoke;
-    height: 100vh;
+    height: 900px;
 }
 .diary, .aim {
     font-size: 30px;
@@ -74,7 +70,21 @@ body {
     margin: 30px;
     border-bottom: #0b2e13 5px solid;
 }
+.time {
+    height: 100px;
+    width: 100%;
+    background-color: #062c33;
+    color: white;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 0px;
+    display: flex;
+}
+.time p{
 
+}
 .food-log {
     font-size: 20px;
     font-weight: lighter;

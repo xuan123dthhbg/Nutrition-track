@@ -44,6 +44,15 @@
     <div class="w3-row profile-body">
         <div class="w3-col body-left" style="width: 20%"></div>
         <div class="w3-col body-center" style="width: 60%">
+            <div class="time">
+                <div style="width: 50%">
+                    <a href=""><i class="fas fa-angle-left"></i></a>
+                </div>
+                <div style="width: 100%">Today <br>19/06</div>
+                <div style="width: 50%">
+                    <a href=""><i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
             <div class="diary">Nhật ký</div>
             <div class="food-log">
                 <div class="breakfast">
