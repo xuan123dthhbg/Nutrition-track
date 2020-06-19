@@ -43,10 +43,10 @@ require 'db_connection.php';
                 <a class="nav-link active btn " href="#">Giới thiệu  </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link active btn" href="./pages/login.php"> Đăng nhập  </a>
+                <a class="nav-link active btn" href="login.php"> Đăng nhập  </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link  active btn " href="./pages/register.php">Đăng kí </a>
+                <a class="nav-link  active btn " href="register.php">Đăng kí </a>
               </li>
             </ul>
        
@@ -158,7 +158,7 @@ require 'db_connection.php';
                        'width':600,
                        'height':400,
                        is3D:true,
-                       backgroundColor:'#E0FFFF'};
+                       backgroundColor:'#c4ebd1'};
         var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
