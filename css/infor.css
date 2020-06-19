@@ -41,13 +41,13 @@ body {
   }
 
   .home {
-    height: 1250px;
+    height: 1500px;
     width: 100%;
     background-color: rgb(196, 235, 209);
 }
 .home-header {
     height: 30px;
-    width: 100%;
+   
 }
 .search-pos {
     height: 100px;
