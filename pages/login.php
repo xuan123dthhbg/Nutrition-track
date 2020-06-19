@@ -27,7 +27,7 @@ if ($mat_khau != $row["mat_khau"]) {
     exit;
 }
 $_SESSION['ten_dang_nhap'] = $ten_dang_nhap;
-echo "Xin chào " . $ten_dang_nhap . ". Bạn đã đăng nhập thành công. <a href='userInfor.php'>Tiếp tục</a>";
+echo "Xin chào " . $ten_dang_nhap . ". Bạn đã đăng nhập thành công. <a href='../index.php'>Tiếp tục</a>";
 die();
 }
 ?>
