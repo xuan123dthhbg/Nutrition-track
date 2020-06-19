@@ -1,6 +1,15 @@
 body {
     margin: 0;
     font-family: "Opensan";
+    background: url(../img/background2.png);
+    background-position: center;
+
+
+          background-size: cover;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          height:100%;
 }
 @font-face {
     font-family: Opensan;
@@ -8,9 +17,7 @@ body {
 }
 
 .header {
-    display: flex;
-    position: fixed;
-    width: 100%;
+   
 }
 .header-img {
     margin: 15px;
@@ -22,9 +29,7 @@ body {
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 0px;
+   
     background-color: rgb(86, 226, 128);
     padding: 0px;
     opacity: 0.9;
@@ -47,18 +52,15 @@ body {
 .home {
     height: 100vh;
     width: 100%;
-    background-image: url(../img/background2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+   
 }
 .home-header {
-    height: 200px;
+    height: 50px;
     width: 100%;
 }
 .message {
     color: lightseagreen;
-    text-shadow: 2px 2px 5px white;
+    text-shadow: 1px 1px 1px white;
     position: center;
     margin-left: 120px;
     margin-top: 10px;
@@ -71,11 +73,16 @@ body {
 .user-infor {
     border: #1AAB8A 1px solid;
     border-radius: 20px;
-    margin-left: 700px;
+    
     background-color: mediumseagreen;
     width: 650px;
     opacity: 0.6;
     font-size: 20px;
+     position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 280px;
 }
 
 .user-infor input[type="submit"]
@@ -103,5 +110,5 @@ body {
 .text-infor{
     margin-top: 50px;
     margin-left: 160px;
-    color: honeydew;
+    color: black;
 }
