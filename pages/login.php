@@ -41,14 +41,27 @@ die();
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <div class="header grid-container">
-        <a href="../index.php">
-            <div class="header-img"></div></a>
-        <button class="about btn">Giới thiệu</button>
-        <a href="./register.php">
-            <button class="register btn">Đăng ký</button>
-        </a>
-    </div>
+    <div class="header grid-container container-fluid" >
+        <nav class="navbar navbar-expand-sm navbar-light ">
+            <a  class="navbar-brand" href="../index.php">
+            <img src="../img/logo.png" alt="logo" >
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"> </div>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+              <li class="nav-item ">
+                <a class="nav-link active btn " href="#">Giới thiệu  </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  active btn " href="register.php">Đăng kí </a>
+              </li>
+
+            </ul>
+        </nav> 
+</div>
 
     <div class="home-body">
 
