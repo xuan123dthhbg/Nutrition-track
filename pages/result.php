@@ -53,9 +53,6 @@ $searcht = $_POST['searcht'];
         </div>
     <div class="home-body">
         <div class="head"></div>
-       
-      
-       
         <div class="results">
            
                 <p class="result-mess">Có 

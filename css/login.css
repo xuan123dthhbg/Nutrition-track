@@ -7,9 +7,7 @@ body {
     src: url(../font/OpenSans-Bold.ttf);
 }
 .header {
-    display: flex;
-    position: fixed;
-    width: 100%;
+   
 }
 
 .header-img {
@@ -17,15 +15,13 @@ body {
     margin-left: 100px;
     margin-right: 1000px;
     height: 80px;
-    width: 250px;
+    width: 1050px;
     background-image: url(../img/logo.png);
     background-repeat: no-repeat;
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-gap: 0px;
+    
     background-color: rgb(86, 226, 128);
     padding: 0px;
     opacity: 0.9;
