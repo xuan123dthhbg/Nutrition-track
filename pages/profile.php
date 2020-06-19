@@ -1,34 +1,3 @@
-<?php
-session_start();
-require 'db_connection.php';
-
-//Lấy dữ liệu từ file register.php
-
-$sex=$_POST['sex'];
-$age=$_POST['age'];
-$weight=$_POST['weight'];
-$height=$_POST['height'];
-$level_act=$_POST['level-act'];
-//$ten_dang_nhap=$_POST['username'];
-echo $sex;
-echo $age;
-echo $weight;
-echo $height;
-echo $level_act;
-
-$sql="SELECT m.*,u.* FROM member m join username u on u.id=m.id WHERE m.ten_dang_nhap='$ten_dang_nhap'";
-
-$result = $conn->query($sql);
-
-$addmember="INSERT INTO `userinfor` (`sex`,`age` ,`weight`,`height`,`activity_level`) VALUES ('{$sex}','{$age}','{$weight}','{$height}',,'{$level_act}',)";
-$sql1 = $conn->query( $addmember);
-
-if ($sql1){
-echo "đăng kí thành công . <a href='userInfor.php'>Tiếp tục</a>";
-}
-else
-echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='dangky.php'>Thử lại</a>";
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,34 +6,82 @@ echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='dangky.php'>Th�
     <title>Thông tin dinh dưỡng</title>
     <link rel="stylesheet" href="../css/profile.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-<div class="header grid-container">
-    <a href="../index.php">
-        <div class="header-img"></div></a>
-    <button class="about btn">Giới thiệu</button>
-    <a href="../index.php">
-        <button class="login btn">Đăng xuất</button>
-    </a>
-</div>
-<div class="home">
-    <div class="home-header"></div>
-
-    <table class="infor-bar">
-        <tr>
-            <th>159cm</th>
-            <th class="avt">
-                <img src="../img/avatar.png" style="width: 150px; height: 150px">
-                <p>Username</p>
-            </th>
-            <th>56kg</th>
-        </tr>
-    </table>
-        <div class="menu">
-            <button class="infor-btn">Hồ sơ của tôi</button> <br>
-            <button class="infor-btn">Nhật ký</button>
+    <div class="header grid-container">
+        <a href="../index.php">
+            <div class="header-img"></div>
+        </a>
+        <button class="about btn">Giới thiệu</button>
+        <a href="../index.php">
+            <button class="logout btn">Đăng xuất</button>
+        </a>
+    </div>
+    <div class="infor-bar">
+        <div class="avt">
+            <img src="../img/avatar.png" style="width: 200px; height: 200px">
         </div>
-
-</div>
+        <div class="infor-index">
+            <p style="font-weight: bolder; font-size: 30px; border-bottom: #111111 5px solid; margin-left: 50px">Username</p>
+            <table style="width: 100%; font-size: 20px">
+                <tr>
+                    <th>Chiều cao</th>
+                    <th>Cân nặng</th>
+                    <th>BMI</th>
+                    <th>TDEE</th>
+                </tr>
+                 <tr align="center">
+                     <td>159cm</td>
+                     <td>56kg</td>
+                     <td>21.9</td>
+                     <td>1800KCal</td>
+                 </tr>
+            </table>
+        </div>
+    </div>
+    <div class="w3-row profile-body">
+        <div class="w3-col body-left" style="width: 20%"></div>
+        <div class="w3-col body-center" style="width: 60%">
+            <div class="time">
+                <div style="width: 50%">
+                    <a href=""><i class="fas fa-angle-left"></i></a>
+                </div>
+                <div style="width: 100%">Today <br>19/06</div>
+                <div style="width: 50%">
+                    <a href=""><i class="fas fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="diary">Nhật ký</div>
+            <div class="food-log">
+                <div class="breakfast">
+                    Bữa sáng
+                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
+                </div>
+                <div class="lunch">
+                    Bữa trưa
+                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
+                </div>
+                <div class="snack" style="display: flex">
+                    Bữa phụ
+                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
+                </div>
+                <div class="dinner" style="display: flex">
+                    Bữa tối
+                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
+                </div>
+            </div>
+            <div class="aim">Mục Tiêu</div>
+            <div class="user-aim">
+                <p>Cân nặng: 59kg</p>
+                <p>Năng lượng hàng ngày: 1200Kcal</p>
+                <p>Protein: 50%</p>
+                <p>Fat: 20%</p>
+                <p>Carbohydtares: 30%</p>
+            </div>
+        </div>
+        <div class="w3-col body-right" style="width: 20%"></div>
+    </div>
 </body>
 </html>
