@@ -23,7 +23,8 @@ $addmember="INSERT INTO `member` (`ho_ten`,`ten_dang_nhap` ,`mat_khau`) VALUES (
 $sql1 = $conn->query( $addmember);
 
 if ($sql1)
-echo "Quá trình đăng ký thành công. <a href='#'>Về trang chủ</a>";
+    header('Location: userInfor.php');
+//echo "Quá trình đăng ký thành công. <a href='#'>Về trang chủ</a>";
 else
 echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='dangky.php'>Thử lại</a>";
 ?>
