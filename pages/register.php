@@ -41,7 +41,7 @@
     <div class="home-body">
         <div class="register-box " >
             <h1>Đăng ký</h1>
-            <form method="post" action="./userInfor.php" >
+            <form method="post" action="./register_action.php" >
                 <p>Họ tên</p>
                 <input type="text" name="name" placeholder="Nhập họ và tên" required>
                 <p>Tên đăng nhập</p>
