@@ -39,7 +39,15 @@
                     <tr align="center">
                         <td>159cm</td>
                         <td>56kg</td>
+<!--                        cách tính BMI: BMI = cân nặng / (chiều cao x chiều cao)-->
                         <td>21.9</td>
+<!--                        cách tính TDEE: TDEE = BMR x R-->
+<!--                        trong đó: BMR = 66 + (13.7 x cân nặng) + (5 x chiều cao) - (6.76 x tuổi) (đối với nam)-->
+<!--                                  BMR = 655 + (9.6 x cân nặng) + (1.8 x chiều cao) - (4.7 x tuổi) (đối với nữ)-->
+<!--                                  R = 1.2 đối với level 1-->
+<!--                                  R = 1.3 - 1.5 level 2-->
+<!--                                  R = 1.5 - 1.7 level 3-->
+<!--                                  R > 1.7 level 4-->
                         <td>1800KCal</td>
                     </tr>
                 </table>
