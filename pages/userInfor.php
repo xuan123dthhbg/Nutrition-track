@@ -1,30 +1,3 @@
-<?php
-session_start();
-require 'db_connection.php';
-
-//Lấy dữ liệu từ file register.php
-
-$ho_ten = $_POST['name'];
-$mat_khau = $_POST['password'];
-$ten_dang_nhap = $_POST['username'];
-
-
-$sql="SELECT ten_dang_nhap FROM member WHERE ten_dang_nhap='$ten_dang_nhap'";
-
-$result = $conn->query($sql);
-
-
-if ($result->num_rows > 0)
-{
-    echo "Tên đăng nhập này đã có người dùng. Vui lòng chọn tên đăng nhập khác. <a href='javascript: history.go(-1)'>Trở lại</a>";
-    exit;
-}
-$addmember="INSERT INTO `member` (`ho_ten`,`ten_dang_nhap` ,`mat_khau`) VALUES ('{$ho_ten}','{$ten_dang_nhap}','{$mat_khau}')";
-$sql1 = $conn->query( $addmember);
-
-if ($sql1){   
-?>
-
 
 <!doctype html>
 <html lang="en">
@@ -57,7 +30,7 @@ if ($sql1){
             Hoàn thiện hồ sơ của bạn để bắt đầu và có trải nghiệm tốt nhất!
         </h3>
 
-        <form action="./profile.php" class="user-infor" method='POST'>
+        <form action="userInforACtion.php" class="user-infor" method='POST'>
             <div class="text-infor">
             <table style="width: 60%">
                <tr>
@@ -73,6 +46,7 @@ if ($sql1){
                         <td>Tuổi</td>
                         <td><input type="number" id="age" name="age" value="age"
                                    style="width: 100px; text-align: center; margin: 5px; font-size: 25px"
+                                   required
                         >
                         </td>
                     </tr>
@@ -80,6 +54,7 @@ if ($sql1){
                         <td>Cân nặng</td>
                         <td><input type="number" placeholder="kg" id="weight" name="weight" value="weight"
                                    style="width: 100px; text-align: center; margin: 5px; font-size: 25px"
+                                   required
                         >
                         </td>
                     </tr>
@@ -87,20 +62,21 @@ if ($sql1){
                         <td>Chiều cao</td>
                         <td><input type="number" placeholder="cm" id="height" name="height" value="height"
                                    style="width: 100px; text-align: center; margin: 5px; font-size: 25px"
+                                   required
                         >
                         </td>
                     </tr>
                 </table>
                 <p>Mức độ hoạt động:</p>
-                <input type="radio" id="level-1" name="level-act" value="1">
+                <input type="radio" id="level-1" name="level_act" value="1">
                 <label for="level-1">Ít vận động (công việc văn phòng)</label> <br>
-                <input type="radio" id="level-2" name="level-act" value="2">
+                <input type="radio" id="level-2" name="level_act" value="2">
                 <label for="level-2">Tập thể dục nhẹ (1-2 ngày/tuần)</label> <br>
-                <input type="radio" id="level-3" name="level-act" value="3">
+                <input type="radio" id="level-3" name="level_act" value="3">
                 <label for="level-3">Tập thể dục vừa phải (3-5 ngày/tuần)</label> <br>
-                <input type="radio" id="level-4" name="level-act" value="4">
+                <input type="radio" id="level-4" name="level_act" value="4">
                 <label for="level-4">Tập thể dục nặng (6-7 ngày/tuần)</label> <br>
-                <input type="radio" id="level-5" name="level-act" value="5">
+                <input type="radio" id="level-5" name="level_act" value="5">
                 <label for="level-5">Vận động viên (2 lần/ngày)</label> <br>
 
                 <input type="submit" value="Hoàn thành">
@@ -109,8 +85,4 @@ if ($sql1){
     </div>
 </body>
 </html>
-<?php
-}
-else
-echo "Có lỗi xảy ra trong quá trình đăng ký. <a href='dangky.php'>Thử lại</a>";
-?>
+
