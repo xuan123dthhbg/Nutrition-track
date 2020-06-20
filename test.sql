@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 19, 2020 lúc 05:58 AM
+-- Thời gian đã tạo: Th6 20, 2020 lúc 02:06 PM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.5
 
@@ -99,34 +99,66 @@ CREATE TABLE `member` (
   `id` int(15) NOT NULL,
   `ho_ten` varchar(50) NOT NULL,
   `ten_dang_nhap` varchar(50) NOT NULL,
-  `mat_khau` text NOT NULL
+  `mat_khau` text NOT NULL,
+  `sex` varchar(3) DEFAULT NULL,
+  `age` int(20) DEFAULT NULL,
+  `weight` int(20) DEFAULT NULL,
+  `height` int(20) DEFAULT NULL,
+  `activity_level` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Đang đổ dữ liệu cho bảng `member`
 --
 
-INSERT INTO `member` (`id`, `ho_ten`, `ten_dang_nhap`, `mat_khau`) VALUES
-(1, '', '', ''),
-(2, 'admin', '18021245', '1213'),
-(3, 'admin', 'Dinhduong', '123'),
-(4, 'admin', 'admin', '111'),
-(5, 'admin', '1111111', '1111'),
-(6, 'admin', '222', '131'),
-(7, 'admin', '222323', '313'),
-(8, 'admin', '222323?', '?dds'),
-(9, 'Thu', 'cherry', 'ghggjgj'),
-(10, '111', '23323', '?ds'),
-(11, '111', 'gdsfdsffe', 'r?'),
-(12, 'admin', 'thutrinhvn21@gmail.com', '123r'),
-(13, 'admin', 'thutrinhvn21@gmail.comt', 'thu'),
-(14, 'admin', '180212455', 'grgf'),
-(15, '123', '111', '111'),
-(16, '111', 'rg', 'êfwd'),
-(17, '111', 'rgf', 'aa'),
-(18, '111', 'rgfdf', '?'),
-(19, 'admin', '18021245kn', 'nnbmnm'),
-(20, 'admin', '18021245knd', '??');
+INSERT INTO `member` (`id`, `ho_ten`, `ten_dang_nhap`, `mat_khau`, `sex`, `age`, `weight`, `height`, `activity_level`) VALUES
+(1, '', '', '', NULL, NULL, NULL, NULL, NULL),
+(2, 'admin', '18021245', '1213', 'Nam', 544, 545, 45, 5),
+(3, 'admin', 'Dinhduong', '123', 'Nam', -9090, 88, 98, 1),
+(4, 'admin', 'admin', '111', NULL, NULL, NULL, NULL, NULL),
+(5, 'admin', '1111111', '1111', NULL, NULL, NULL, NULL, NULL),
+(6, 'admin', '222', '131', NULL, NULL, NULL, NULL, NULL),
+(7, 'admin', '222323', '313', NULL, NULL, NULL, NULL, NULL),
+(8, 'admin', '222323?', '?dds', NULL, NULL, NULL, NULL, NULL),
+(9, 'Thu', 'cherry', 'ghggjgj', NULL, NULL, NULL, NULL, NULL),
+(10, '111', '23323', '?ds', NULL, NULL, NULL, NULL, NULL),
+(11, '111', 'gdsfdsffe', 'r?', NULL, NULL, NULL, NULL, NULL),
+(12, 'admin', 'thutrinhvn21@gmail.com', '123r', NULL, NULL, NULL, NULL, NULL),
+(13, 'admin', 'thutrinhvn21@gmail.comt', 'thu', NULL, NULL, NULL, NULL, NULL),
+(14, 'admin', '180212455', 'grgf', NULL, NULL, NULL, NULL, NULL),
+(15, '123', '111', '111', NULL, NULL, NULL, NULL, NULL),
+(16, '111', 'rg', 'êfwd', NULL, NULL, NULL, NULL, NULL),
+(17, '111', 'rgf', 'aa', NULL, NULL, NULL, NULL, NULL),
+(18, '111', 'rgfdf', '?', NULL, NULL, NULL, NULL, NULL),
+(19, 'admin', '18021245kn', 'nnbmnm', NULL, NULL, NULL, NULL, NULL),
+(20, 'admin', '18021245knd', '??', NULL, NULL, NULL, NULL, NULL),
+(21, 'Thu', 'thutrinhvn21@gmail.comâs', 's?', NULL, NULL, NULL, NULL, NULL),
+(22, 'Thu', 'thutrinhvn21@gmail.comâsdsd', 'ssd', NULL, NULL, NULL, NULL, NULL),
+(23, 'grgtr', 't?t5rt', 'tet', NULL, NULL, NULL, NULL, NULL),
+(24, 'grgtr', 'thuthuthuthu', 'thututh', NULL, NULL, NULL, NULL, NULL),
+(25, 'Thu', 'fesdf?sdsff', 'ds?sad', NULL, NULL, NULL, NULL, NULL),
+(26, 'admin', 'thuthuth', 'têfc', NULL, NULL, NULL, NULL, NULL),
+(27, 'tr?nh th? thu', '18021245nmnmn', 'jkjkjk', NULL, NULL, NULL, NULL, NULL),
+(28, '', 'fdgf', 'fdfdsf', NULL, NULL, NULL, NULL, NULL),
+(29, '', '', 'thhth', NULL, NULL, NULL, NULL, NULL),
+(30, 'thu', 'stung', '123', NULL, NULL, NULL, NULL, NULL),
+(31, 'tr?nh th? thu', 'Cher', '111', NULL, NULL, NULL, NULL, NULL),
+(32, 'tr?nh th? thu', 'Cherfd', 'qe', NULL, NULL, NULL, NULL, NULL),
+(33, 'thh', 'tfdfvdgf', '123', NULL, NULL, NULL, NULL, NULL),
+(34, '', '', 'thtu', NULL, NULL, NULL, NULL, NULL),
+(35, 'admin', 'ty', 'tyh', NULL, NULL, NULL, NULL, NULL),
+(36, 'admin', 'tt', 'ttt', NULL, NULL, NULL, NULL, NULL),
+(37, 'admin', 'ttf', 'fdf?', NULL, NULL, NULL, NULL, NULL),
+(38, 'admin', '565', '56565', NULL, NULL, NULL, NULL, NULL),
+(39, '65', '656', '6565', NULL, NULL, NULL, NULL, NULL),
+(40, 'admin', 'tyyyy', '31322', NULL, NULL, NULL, NULL, NULL),
+(41, 'admin', '1234123', '123123', 'Nam', 13, 13, 31, 4),
+(42, 'admin', 'uuuu', 'uuuu', NULL, NULL, NULL, NULL, NULL),
+(43, 'admin', '12333', '3333', 'Nam', 32, 33, 33, 1),
+(44, 'admin', '13', '31', 'Nam', 13, 13, 13, 1),
+(45, '123', '33', '33', NULL, NULL, NULL, NULL, NULL),
+(46, 'admin', 'fgsfe', 'fesrew', NULL, NULL, NULL, NULL, NULL),
+(47, 'admin', 'kjk', 'jjk', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -186,7 +218,7 @@ ALTER TABLE `userinfor`
 -- AUTO_INCREMENT cho bảng `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(15) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT cho bảng `userinfor`
