@@ -47,18 +47,18 @@ body {
     background-color: rgb(86, 226, 128);
     opacity: 0.9;
     display: flex;
+    position: relative;
 }
-.avt {
-    margin-left: 370px;
-}
+
 .infor-index{
     margin-left: 50px;
-    width: 700px;
+    width: 100%;
 }
 .body-left, .body-right{
     background-image: url("../img/background2.png");
     background-repeat: no-repeat;
     height: 100vh;
+    background-size: 1000%;
 }
 .body-center {
     background-color: whitesmoke;
@@ -67,7 +67,7 @@ body {
 .diary, .aim {
     font-size: 30px;
     font-weight: bolder;
-    margin: 30px;
+    margin: 20px;
     border-bottom: #0b2e13 5px solid;
 }
 .time {
@@ -95,12 +95,32 @@ body {
     border-bottom: #1c7430 2px solid;
 }
 .user-aim {
+    position: relative;
     font-size: 20px;
     font-weight: lighter;
-    margin: 75px;
+    padding-left: 70px;
+    padding-right: 70px;
+    width: 100%;
 }
-.user-aim p{
-    border-bottom: #1e7e34 2px solid;
+.user-aim input{
+    margin: 8px;
+    width: 100%;
+    padding: 5px;
+    border: #ffcfa8;
+}
+
+.user-aim button{
+    width: 100px;
+    margin: 10px;
+    background-color: darkseagreen;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+.user-aim button:hover{
+    background-color: #89b8da;
+    color: antiquewhite;
+    cursor: pointer;
 }
 
 

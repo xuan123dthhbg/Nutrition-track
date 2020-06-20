@@ -10,78 +10,113 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <div class="header grid-container">
-        <a href="../index.php">
-            <div class="header-img"></div>
-        </a>
-        <button class="about btn">Giới thiệu</button>
-        <a href="../index.php">
-            <button class="logout btn">Đăng xuất</button>
-        </a>
-    </div>
-    <div class="infor-bar">
-        <div class="avt">
-            <img src="../img/avatar.png" style="width: 200px; height: 200px">
+<div class="header grid-container">
+    <a href="../index.php">
+        <div class="header-img"></div>
+    </a>
+    <button class="about btn">Giới thiệu</button>
+    <a href="../index.php">
+        <button class="logout btn">Đăng xuất</button>
+    </a>
+</div>
+<div class="w3-row">
+    <div class="w3-col infor-bar-left" style="width: 20%; height: 250px; background-color: rgb(86,226,128); opacity: 0.9"></div>
+    <div class="w3-col infor-bar-center" style="width: 60%; height: 250px">
+        <div class="infor-bar">
+            <div class="avt">
+                <img src="../img/avatar.png" style="width: 200px; height: 200px">
+            </div>
+            <div class="infor-index">
+                <p style="font-weight: bolder; font-size: 30px; border-bottom: #111111 5px solid; margin-left: 50px">
+                    Username</p>
+                <table style="width: 100%; font-size: 20px">
+                    <tr>
+                        <th>Chiều cao</th>
+                        <th>Cân nặng</th>
+                        <th>BMI</th>
+                        <th>TDEE</th>
+                    </tr>
+                    <tr align="center">
+                        <td>159cm</td>
+                        <td>56kg</td>
+                        <td>21.9</td>
+                        <td>1800KCal</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div class="infor-index">
-            <p style="font-weight: bolder; font-size: 30px; border-bottom: #111111 5px solid; margin-left: 50px">Username</p>
-            <table style="width: 100%; font-size: 20px">
-                <tr>
-                    <th>Chiều cao</th>
-                    <th>Cân nặng</th>
-                    <th>BMI</th>
-                    <th>TDEE</th>
+    </div>
+    <div class="w3-col infor-bar-right" style="width: 20%; height: 250px; background-color: rgb(86, 226, 128); opacity: 0.9;"></div>
+</div>
+<div class="w3-row profile-body">
+    <div class="w3-col body-left" style="width: 20%; height: 970px"></div>
+    <div class="w3-col body-center" style="width: 60%; height: 970px">
+        <div class="time">
+            <div style="width: 50%">
+                <a href=""><i class="fas fa-angle-left"></i></a>
+            </div>
+            <div style="width: 100%">Today <br>19/06</div>
+            <div style="width: 50%">
+                <a href=""><i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="nutrition">
+            <table style="width:100%">
+                <tr style="background-color: rgb(238, 238, 238);">
+                    <th style="width:25%; color: rgb(0, 46, 92); font-size: 20px">Protein <br>
+                        <p style="color: rgb(83,140,196); font-size: 17px; font-family: Opensan; margin: 5px">50g</p></th>
+                    </th>
+                    <th style="width:25%; color: rgb(0, 46, 92); font-size: 20px">Carbohydrates <br>
+                        <p style="color: rgb(83,140,196); font-size: 17px; font-family: Opensan; margin: 5px">50g</p></th>
+                    </th>
+                    <th style="width:25%; color: rgb(0, 46, 92); font-size: 20px">Fat <br>
+                        <p style="color: rgb(83,140,196); font-size: 17px; font-family: Opensan; margin: 5px">50g</p></th>
+                    <th style="width:25%; color: rgb(0, 46, 92); font-size: 20px">Total Calories <br>
+                        <p style="color: rgb(83,140,196); font-size: 17px; font-family: Opensan; margin: 5px">1035Kcal</p></th>
+                    </th>
                 </tr>
-                 <tr align="center">
-                     <td>159cm</td>
-                     <td>56kg</td>
-                     <td>21.9</td>
-                     <td>1800KCal</td>
-                 </tr>
             </table>
         </div>
-    </div>
-    <div class="w3-row profile-body">
-        <div class="w3-col body-left" style="width: 20%"></div>
-        <div class="w3-col body-center" style="width: 60%">
-            <div class="time">
-                <div style="width: 50%">
-                    <a href=""><i class="fas fa-angle-left"></i></a>
-                </div>
-                <div style="width: 100%">Today <br>19/06</div>
-                <div style="width: 50%">
-                    <a href=""><i class="fas fa-angle-right"></i></a>
-                </div>
+        <div class="diary">Nhật ký</div>
+        <div class="food-log">
+            <div class="breakfast">
+                Bữa sáng
+                <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px; margin-right: 10px"></i></a>
+                <!--                Món ăn được thêm -->
+                Thịt lợn (200Kcal), Dưa chuột (15Kcal)
             </div>
-            <div class="diary">Nhật ký</div>
-            <div class="food-log">
-                <div class="breakfast">
-                    Bữa sáng
-                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
-                </div>
-                <div class="lunch">
-                    Bữa trưa
-                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
-                </div>
-                <div class="snack" style="display: flex">
-                    Bữa phụ
-                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
-                </div>
-                <div class="dinner" style="display: flex">
-                    Bữa tối
-                    <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px"></i></a>
-                </div>
+
+            <div class="lunch">
+                Bữa trưa
+                <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px; margin-right: 10px"></i></a>
+                <!--                Món ăn được thêm -->
+                Rau cải thìa (20Kcal), Thịt bò (200Kcal)
             </div>
-            <div class="aim">Mục Tiêu</div>
-            <div class="user-aim">
-                <p>Cân nặng: 59kg</p>
-                <p>Năng lượng hàng ngày: 1200Kcal</p>
-                <p>Protein: 50%</p>
-                <p>Fat: 20%</p>
-                <p>Carbohydtares: 30%</p>
+            <div class="snack" style="display: flex">
+                Bữa phụ
+                <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px; margin-right: 10px"></i></a>
+                <!--                Món ăn được thêm -->
+                Sữa chua không đường (100Kcal)
             </div>
+            <div class="dinner" style="display: flex">
+                Bữa tối
+                <a href=""><i class="fas fa-plus-circle" style="margin-left: 10px; margin-right: 10px"></i></a>
+                <!--                Món ăn được thêm -->
+                Salad (300Kcal); Ức gà (200Kcal)
+            </div>
+
         </div>
-        <div class="w3-col body-right" style="width: 20%"></div>
+        <div class="aim">Mục Tiêu</div>
+        <form class="user-aim">
+            <input type="text" value="Cân nặng: 59kg"> <br>
+            <input type="text" value="Năng lượng hàng ngày: 1200Kcal"> <br>
+            <input type="text" value="Protein: 50%"> <br>
+            <input type="text" value="Fat: 20%"> <br>
+            <input type="text" value="Carbohydtares: 30%"> <br>
+            <button type="submit">Lưu</button>
+        </form>
     </div>
+    <div class="w3-col body-right" style="width: 20%; height: 970px"></div>
+</div>
 </body>
 </html>
