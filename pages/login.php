@@ -26,7 +26,7 @@ if ($mat_khau != $row["mat_khau"]) {
     echo "Mật khẩu không đúng. Vui lòng nhập lại. <a href='javascript: history.go(-1)'>Trở lại</a>";
     exit;
 }
-$_SESSION['ten_dang_nhapt'] = $ten_dang_nhap;
+$_SESSION['ten_dang_nhap_2'] = $ten_dang_nhap;
 header('Location: indexUser.php');   
 //echo "Xin chào " . $ten_dang_nhap . ". Bạn đã đăng nhập thành công. <a href='../index.php'>Tiếp tục</a>";
 die();

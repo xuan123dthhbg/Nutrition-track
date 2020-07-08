@@ -21,7 +21,8 @@ if ($result->num_rows > 0)
 }
 $addmember="INSERT INTO `member` (`ho_ten`,`ten_dang_nhap` ,`mat_khau`) VALUES ('{$ho_ten}','{$ten_dang_nhap}','{$mat_khau}')";
 $sql1 = $conn->query( $addmember);
-
+$_SESSION['ten_dang_nhap_1'] = $ten_dang_nhap;
+$_SESSION['ten_dang_nhap'] = $ho_ten;
 if ($sql1)
     header('Location: userInfor.php');
 //echo "Quá trình đăng ký thành công. <a href='#'>Về trang chủ</a>";

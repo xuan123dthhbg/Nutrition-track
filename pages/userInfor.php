@@ -68,17 +68,15 @@
                     </tr>
                 </table>
                 <p>Mức độ hoạt động:</p>
-                <input type="radio" id="level-1" name="level_act" value="1">
+                <input type="radio" id="level-1" name="level_act" value="1.2">
                 <label for="level-1">Ít vận động (công việc văn phòng)</label> <br>
-                <input type="radio" id="level-2" name="level_act" value="2">
+                <input type="radio" id="level-2" name="level_act" value="1.4">
                 <label for="level-2">Tập thể dục nhẹ (1-2 ngày/tuần)</label> <br>
-                <input type="radio" id="level-3" name="level_act" value="3">
+                <input type="radio" id="level-3" name="level_act" value="1.6">
                 <label for="level-3">Tập thể dục vừa phải (3-5 ngày/tuần)</label> <br>
                 <input type="radio" id="level-4" name="level_act" value="4">
                 <label for="level-4">Tập thể dục nặng (6-7 ngày/tuần)</label> <br>
-                <input type="radio" id="level-5" name="level_act" value="5">
-                <label for="level-5">Vận động viên (2 lần/ngày)</label> <br>
-
+               
                 <input type="submit" value="Hoàn thành">
             </div>
         </form>

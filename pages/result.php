@@ -1,7 +1,7 @@
 <?php 
 session_start();
 require 'db_connection.php';
-$searcht = $_POST['searcht'];
+ $searcht = $_POST['searcht'];
  $sql = "select * from data d join image_data i on i.Maten=d.Maten where Tenmon like '%$searcht%'";
 
   $result = $conn->query($sql);
@@ -53,21 +53,14 @@ $searcht = $_POST['searcht'];
         </div>
     <div class="home-body">
         <div class="head"></div>
-       
-      
-       
         <div class="results">
            
-                <p class="result-mess">Có 
+          <p class="result-mess">Có 
                <?php echo mysqli_num_rows($result);?>
                kết quả : </p>
                <?php
                 While( $row = $result -> fetch_array()){
-                   
-           ?>
-
-            
-       
+               ?>
         <div class="result-1">
         <div class="img1" style="background-image: url(<?php echo $row['URL'] ?>);" >
         </div>

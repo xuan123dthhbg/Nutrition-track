@@ -18,7 +18,7 @@
    
      <div class="header grid-container container-fluid" >
         <nav class="navbar navbar-expand-sm navbar-light ">
-            <a  class="navbar-brand" href="../index.php">
+            <a  class="navbar-brand" href="indexUser.php">
             <img src="../img/logo.png" alt="logo" >
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,9 +42,13 @@
                            width="50px"
                          />
                        </div>
-                       <div  style="margin-left :5px"><?php 
-       if (isset($_SESSION['ten_dang_nhapt']) && $_SESSION['ten_dang_nhapt']){
-           echo $_SESSION['ten_dang_nhapt']."<br/>";}?>
+                       <div  style="margin-left :5px">
+                       <?php 
+                        if (isset($_SESSION['ten_dang_nhap_1'])){
+                            echo $_SESSION['ten_dang_nhap_1']."<br/>";}
+                       // if (isset($_SESSION['ten_dang_nhap_2'])){
+                       //     echo $_SESSION['ten_dang_nhap_2']."<br/>";} 
+           ?>
                         </div>
                     </div>
                  </a>

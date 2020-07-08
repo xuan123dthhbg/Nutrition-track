@@ -69,21 +69,17 @@ require 'db_connection.php';
                     <div class="calories">Giá trị dinh dưỡng </div>
                         <div  >
                         <table class="w3-table w3-bordered w3-hoverable">
-                        <tr>
-                        <th> Tên</th>
-                        <th>Giá trị</th>
-                     
-                        </tr>
+                       
                        
                      <?php 
                     
                      echo 
-                     '<tr>'.'<td>'."Calories:".'</td>'.'<td>'. $row["Calories/100g"]." g.".'</td>'.'</tr>'.
-                     '<tr>'.'<td>'."Total Fat :".'</td>'.'<td>'. $row["TotalFat(g)"] ." g.".'</td>'.'</tr>'.
-                     '<tr>'.'<td>'."Cholesterol:".'</td>'.'<td>'. $row["Cholesterol(mg)"] ." mg.".'</td>'.'</tr>'.
-                     '<tr>'.'<td>'."Sodium :".'</td>'.'<td>'. $row["Sodium(g)"] ." g.".'</td>'.'</tr>'.
-                     '<tr>'.'<td>'."Total Carbohydrates :".'</td>'.'<td>'. $row["TotalCarbohydrates"] ." g.".'</td>'.'</tr>'.
-                     '<tr>'.'<td>'. "Protein:".'</td>'.'<td>'.$row["Protein(g)"] ." g."
+                     '<tr>'.'<td>'."Calories:".'</td>'.'<td>'. $row["Calories/100g"]." g".'</td>'.'</tr>'.
+                     '<tr>'.'<td>'."Total Fat :".'</td>'.'<td>'. $row["TotalFat(g)"] ." g".'</td>'.'</tr>'.
+                     '<tr>'.'<td>'."Cholesterol:".'</td>'.'<td>'. $row["Cholesterol(mg)"] ." mg".'</td>'.'</tr>'.
+                     '<tr>'.'<td>'."Sodium :".'</td>'.'<td>'. $row["Sodium(g)"] ." g".'</td>'.'</tr>'.
+                     '<tr>'.'<td>'."Total Carbohydrates :".'</td>'.'<td>'. $row["TotalCarbohydrates"] ." g".'</td>'.'</tr>'.
+                     '<tr>'.'<td>'. "Protein:".'</td>'.'<td>'.$row["Protein(g)"] ." g"
                      .'</td>'.'</tr>'
                               ?>
                         
@@ -144,7 +140,7 @@ require 'db_connection.php';
         data.addColumn('number', 'Slices');
         data.addRows([
           <?php
-          echo "['Calories',".$row["Calories/100g"]."],";
+       //   echo "['Calories',".$row["Calories/100g"]."],";
           echo "['Total Fat',".$row["TotalFat(g)"]."],";
           echo "['Cholesterol',".$row["Cholesterol(mg)"]."],";
           echo "['Sodium',".$row["Sodium(g)"]."],";
@@ -154,7 +150,7 @@ require 'db_connection.php';
           }
           ?>  
         ]);
-        var options = {'title':'TTT',
+        var options = {//'title':'TTT',
                        'width':600,
                        'height':400,
                        is3D:true,
