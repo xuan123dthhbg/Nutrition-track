@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: "Opensan";
+    background: url(../img/background2.png);
+    background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          height:100vh;
+  }
+  @font-face {
+    font-family: Opensan;
+    src: url(../font/OpenSans-Bold.ttf);
+  }
+  
+  .home-header {
+    height: 130px;
+    width: 100%;
+  }
+  
+  .grid-container {
+    background-color: rgb(86, 226, 128);
+    padding: 0px;
+    opacity: 0.9;
+  }
+  .about{
+    margin:20px; 
+    
+  }
+  .btn {
+    margin-top: 25px;
+    text-align: center;
+    border: none;
+    font-size: 20px;
+    height: 60px;
+    width: 200px;
+  }
+  
+  .btn:hover {
+    background-color: rgb(44, 165, 60);
+    cursor: pointer;
+  }
+  
+  .home {
+    height: 1250px;
+    width: 100%;
+  }
+
+  .media {
+      color: white;
+  }
+  .media-body p{
+      font-size: 20px;
+  }
+  .media{
+    margin-top: 50px;
+    margin-left: 350px;
+  }
+  .mess1 {
+      font-size: 30px;
+  }
+  
+  

@@ -28,7 +28,7 @@
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
              
               <li class="nav-item ">
-                <a class="nav-link active btn " href="#">Giới thiệu  </a>
+                <a class="nav-link active btn " href="about.html">Giới thiệu  </a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link active btn" href="login.php"> Đăng nhập  </a>
