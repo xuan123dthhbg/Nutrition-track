@@ -112,7 +112,6 @@ body {
       text-align: center;
       font-weight: 700;
       font-size: 30px;
-      margin-bottom: 20px;
   }
 
   .nutrition {
@@ -182,8 +181,7 @@ body {
   }
 
    .chart{
-    margin-top: 50px;
-    height: auto;
-    width:auto;
-   
+    margin-top: 100px;
+    
 }
+
