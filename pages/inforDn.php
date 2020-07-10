@@ -10,6 +10,7 @@ require 'db_connection.php';
                   
                     While( $row = $result -> fetch_array()){
                         $_SESSION['Maten']=$row["Maten"];
+                       
                       
  
              ?>
@@ -43,21 +44,39 @@ require 'db_connection.php';
              
              
               <li class="nav-item ">
-              <form action="./result.php" method="post" class="search-pos" >
+              <form action="./resultDn.php" method="post" class="search-pos" >
             <div class="search-bar">
-             <input type="text" placeholder="Tìm kiếm"  class="search"  name="searcht"style="margin-left:90px" >
+             <input type="text" placeholder="Tìm kiếm"  class="search"  name="searcht" style="margin-left:90px">
             
             <button type="submit" class="search-icon">Tìm kiếm</button>
        
               </div>
             </form>
               </li>
-              
               <li class="nav-item ">
-                <a class="nav-link active btn" href="./pages/login.php"> Đăng nhập  </a>
+                <a class="nav-link active btn " href="indexUser.php">Trang chủ </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link  active btn " href="./pages/register.php">Đăng kí </a>
+              <li class="nav-item ">
+                <a class="nav-link active btn " href="profile.php"> 
+                <div class=" d-flex ">
+                       <div style="margin-top :-10px" >
+                       <img
+                          class="rounded-circle"
+                           alt="Cinque Terre"
+                           src="../img/avatar.png"
+                           height="50px"
+                           width="50px"
+                         />
+                       </div>
+                       <div  style="margin-left :5px">
+                    <?php 
+                      if (isset($_SESSION['ten_dang_nhap_2'])){
+                                   echo $_SESSION['ten_dang_nhap_2']."<br/>";} 
+                   ?>
+                        
+                        </div>
+                    </div>
+               </a>
               </li>
             </ul>
        
@@ -123,15 +142,20 @@ require 'db_connection.php';
                         </th>
                     <tr>
                         <td>
-                            <div style="font-size: 70px; font-weight: bold;">5</div> <br>
+                            <div style="font-size: 70px; font-weight: bold;"><?php $chay=$row["Calories/100g"]/9.5;echo round($chay,2)?></div> <br>
                             <div style="font-weight: bold; font-size: 25px;">Đạp xe</div>
                         </td>
                         <td>
-                            <div style="font-size: 70px; font-weight: bold;">5</div> <br>
+                            <div style="font-size: 70px; font-weight: bold;">
+                            <?php  $dibo=$row["Calories/100g"]/3.5;
+                                    echo round($dibo,2);
+                             ?>
+                            
+                            </div> <br>
                             <div style="font-weight: bold; font-size: 25px;">Chạy bộ</div>
                         </td>
                         <td>
-                            <div style="font-size: 70px; font-weight: bold;">5</div> <br>
+                            <div style="font-size: 70px; font-weight: bold;"><?php $v=$row["Calories/100g"]/5.5;echo round($v,2)?></div> <br>
                             <div style="font-weight: bold; font-size: 25px;">Làm việc nhà</div>
                         </td>
                     </tr>
@@ -141,14 +165,15 @@ require 'db_connection.php';
                 <div style="font-style: italic; font-size: 15px">Giá trị ước tính dành cho người nặng 63.5kg</div>
     
              <div class="addFood" style="display:flex; justify-content: center;align-items:center;">  
-                 <form action="login.php" method='POST'>
+                 <form action="addFood.php" method='POST'>
               <div class="mess-title">Thêm vào nhật ký?</div>
               <div style="margin-left: 20px">
                 <select style="font-size: 20px; font-weight: 300, margin-left: 10px">
-                        <option name="breakfast" value="breakfast">Bữa sáng</option>
-                        <option name="lunch" value="lunch">Bữa trưa</option>
+                        <option name="breakfast" value="breakfast">Bữa ăn</option>
+                        <!--option name="lunch" value="lunch">Bữa trưa</!--option>
                         <option name="snack" value="snack">Bữa chiều</option>
                         <option name="dinner" value="dinner">Bữa tối</option>
+                         -->
                 </select>
                 <input class=" btn-info " type="submit" value="Thêm món" style="margin-top:30px">
                

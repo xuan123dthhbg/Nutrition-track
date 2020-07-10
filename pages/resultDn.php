@@ -41,6 +41,28 @@ require 'db_connection.php';
               <li class="nav-item ">
                 <a class="nav-link active btn " href="#">Giới thiệu  </a>
               </li>
+              <li class="nav-item">
+              <a class="nav-link active btn " href="profile.php"> 
+                <div class=" d-flex ">
+                       <div style="margin-top :-10px" >
+                       <img
+                          class="rounded-circle"
+                           alt="Cinque Terre"
+                           src="../img/avatar.png"
+                           height="50px"
+                           width="50px"
+                         />
+                       </div>
+                       <div  style="margin-left :5px">
+                    <?php 
+                      if (isset($_SESSION['ten_dang_nhap_2'])){
+                                   echo $_SESSION['ten_dang_nhap_2']."<br/>";} 
+                   ?>
+                        
+                        </div>
+                    </div>
+               </a>
+                </li>
               
             </ul>
        
@@ -67,7 +89,7 @@ require 'db_connection.php';
             
         ?>
         </div>
-           <form action="./infor.php?var=1" method ="get" class="more" >
+           <form action="./inforDn.php?var=1" method ="get" class="more" >
 
                 <button class="more" name='resultt' value=<?php echo $row["Maten"] ?> >
                   <i class="fas fa-chevron-circle-right" style="font-size: 50px;"></i>

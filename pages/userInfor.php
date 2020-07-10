@@ -29,13 +29,13 @@
         <h3 class="message">
             Hoàn thiện hồ sơ của bạn để bắt đầu và có trải nghiệm tốt nhất!
         </h3>
-
-        <form action="userInforACtion.php" class="user-infor" method='POST'>
+      
+        <form action="userInforACtion.php" class="user-infor" method='POST' >
             <div class="text-infor">
             <table style="width: 60%">
-               <tr>
+               <tr >
                  <td>Giới tính</td>
-                 <td>   <select name="sex">
+                 <td>   <select name="sex" style="margin-left:5px">
                             <option value=""></option>
                             <option value="Nam">Nam</option>
                             <option value="Nu">Nữ</option>
@@ -80,6 +80,7 @@
                 <input type="submit" value="Hoàn thành">
             </div>
         </form>
+      
     </div>
 </body>
 </html>

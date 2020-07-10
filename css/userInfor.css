@@ -63,7 +63,7 @@ body {
     text-shadow: 1px 1px 1px white;
     position: center;
     margin-left: 120px;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-right: 120px;
     font-size: 53px;
     text-align: center;
@@ -82,7 +82,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 280px;
+  margin-top: 200px;
 }
 
 .user-infor input[type="submit"]

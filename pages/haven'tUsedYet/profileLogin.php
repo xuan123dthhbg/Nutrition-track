@@ -1,15 +1,4 @@
-<?php session_start();
-require 'db_connection.php';
-$profile =$_SESSION['ten_dang_nhap_2'];
-$idd=$_SESSION['idd'];
-
-$sql="SELECT height,weight,age,activity_level,sex FROM member WHERE  ten_dang_nhap like '%$profile%'";
-
-$result = $conn->query($sql);
-//$conn->close();
-if ($result->num_rows > 0){
-  
-?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,9 +26,7 @@ if ($result->num_rows > 0){
             </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent"> </div>
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item ">
-                <a class="nav-link active btn " href="indexUser.php">Trang chủ  </a>
-              </li>
+             
               <li class="nav-item ">
                 <a class="nav-link active btn " href="#">Giới thiệu  </a>
               </li>
@@ -60,7 +47,7 @@ if ($result->num_rows > 0){
             </div>
             <div class="infor-index">
                 <p style="font-weight: bolder; font-size: 30px; border-bottom: #111111 5px solid; margin-left: 50px">
-               <?php echo$profile ?></p>
+               <?php echo $_SESSION['ten_dang_nhap_1']?></p>
                 <table style="width: 100%; font-size: 20px">
                     <tr align="center">
                         <th>Chiều cao</th>
@@ -69,27 +56,13 @@ if ($result->num_rows > 0){
                         <th>TDEE</th>
                     </tr>
                     <tr align="center" >
-                    <?php 
-                          While( $row = $result -> fetch_array()){
-       
-                            $weight = $row["weight"];
-                            $height= $row["height"];
+                        <td> <?php echo$_SESSION['weight']?></td>
+                        <td> <?php echo$_SESSION['height']?></td>
+<!--                        cách tính BMI: BMI = cân nặng / (chiều cao x chiều cao)-->
+                        <?php $BMI=$_SESSION['weight']/($_SESSION['height']*$_SESSION['height'])?>
+                        <td><?php echo round($BMI,2) ?>
+                        </td>
                       
-                            $age = $row["age"];
-                            $activity_level =$row["activity_level"];
-                            $sex=$row["sex"];
-                        // cách tính BMI: BMI = cân nặng / (chiều cao x chiều cao)
-                      
-                        
-                        ?>
-                        <td> <?php echo $weight;?></td>
-                        <td> <?php echo $height;?></td>
-                        <td> <?php 
-                        if ($height!=0){
-                            $BMI=$weight/($height*$height);
-                            echo round($BMI,2);
-                            };
-                         ?></td>
 <!--                        cách tính TDEE: TDEE = BMR x R-->
 <!--                        trong đó: BMR = 66 + (13.7 x cân nặng) + (5 x chiều cao) - (6.76 x tuổi) (đối với nam)-->
 <!--                                  BMR = 655 + (9.6 x cân nặng) + (1.8 x chiều cao) - (4.7 x tuổi) (đối với nữ)-->
@@ -97,24 +70,19 @@ if ($result->num_rows > 0){
 <!--                                  R = 1.3 - 1.5 level 2-->
 <!--                                  R = 1.5 - 1.7 level 3-->
 <!--                                  R > 1.7 level 4-->
-                       <td> <?php
-                              if($sex=='Nu')
-                              {
-                                $BMR=655+(13.7*$weight)+(5*$height)-(6.76*$age);
-                                $TDEE=$BMR*$activity_level;
-                                echo round($TDEE,2);
-                              }
-                              else{
-                                $BMR=66+(13.7*$weight)+(5*$height)-(6.76*$age);
-                                $TDEE=$BMR*$activity_level;
-                                echo round($TDEE,2);
-                              }
-                       }
-                    }
-                    else {
-                        echo "0 records";
-                       } 
-                     ?></td>       
+                        <?php
+                       /* if($_SESSION['sex']=="Nu")
+                      {
+                        $BMR=655+(13.7*$_SESSION['weight'])+(5*$_SESSION['height'])-(6.76*$_SESSION['age']);
+                        $TDEE=$BMR*$_SESSION['activity_level'];
+                      }
+                        else{
+                            $BMR=66+(13.7*$_SESSION['weight'])+(5*$_SESSION['height'])-(6.76*$_SESSION['age']);
+                            $TDEE=$BMR*$_SESSION['activity_level'];
+                        }
+                        echo round($TDEE,2)*/
+                        ?>
+                        <td>KCal</td>
                     </tr>
                 </table>
             </div>
@@ -153,74 +121,33 @@ if ($result->num_rows > 0){
                 </tr>
             </table>
         </div>
-
-        <?php
-       
-        $id=$_SESSION['idd'];
-       
-       
-     /*   $sql2="SELECT Tenmon,Calories/100g,id,Maten FROM member m
-                                 join addfoodbreakfast a 
-                                      on m.id=a.idBreakfast
-                                 join data d
-                                      on d.Maten=a.Maten
-                                 Where m.id=a.idBreakfast ";*/
-       // $sql2="SELECT Maten,Tenmon,Calories/100g from addfoodbreakfast a member mjoin data d
-         //      on a.Maten=d.Maten  where m.id=a.idBreakfast ";
-         
-       $sql2="SELECT * FROM addfoodbreakfast a join data d on d.Maten=a.Maten WHERE id like'%$id%'";
-       $output='';
-         //$sql2="SELECT height,weight,age,activity_level,sex FROM member WHERE  ten_dang_nhap like '%$profile%'";
-
-          $resultt = $conn->query($sql2);
-          $conn->close();
-
-         
-      
- ?>
         <div class="diary">Nhật ký</div>
         <div class="food-log">
             <div class="breakfast">
-                Thực phảm đã chọn
-                <a href="indexUser.php" ><i class="  fas fa-plus-circle"style="margin-left: 10px; margin-right: 10px" ></i></a>
+                Bữa sáng
+                <a href="indexUser.php"><i class="fas fa-plus-circle" style="margin-left: 10px; margin-right: 10px"></i></a>
                 <!--                Món ăn được thêm -->
-              <?php
-              if ($resultt->num_rows > 0){
-                    While( $row = $resultt -> fetch_array()){
-                        $food=$row["Tenmon"];
-                        $calo=$row["Calories/100g"];
-                        $output.='
-                         <div class="addFood" >'.
-                              $food.'  ( Calories/100g : '. $calo.' )<br>
-                        </div>
-                      ';
-                 }echo $output;}
-                else{
-                  echo  $output.='
-                    <div class="addFood" >
-                         Thêm món<br>
-                   </div>
-                   ';
-                   
-                  }
-              ?>
+                Thịt lợn (200Kcal), Dưa chuột (15Kcal)
             </div>
 
-            <!--div class="lunch">
+            <div class="lunch">
                 Bữa trưa
-                <a href="indexUser.php" ><i class=" fas fa-plus-circle"style="margin-left: 10px; margin-right: 10px" ></i></a> <!--                Món ăn được thêm -->
-              <!--  Rau cải thìa (20Kcal), Thịt bò (200Kcal)
-            </-div>
-            <!--div class="snack" >
+                <a href="indexUser.php"><i class="fas fa-plus-circle" style="margin-left: 10px; margin-right: 10px"></i></a>
+                <!--                Món ăn được thêm -->
+                Rau cải thìa (20Kcal), Thịt bò (200Kcal)
+            </div>
+            <div class="snack" style="display: flex">
                 Bữa phụ
-                <a href="indexUser.php" ><i class="  fas fa-plus-circle"style="margin-left: 10px; margin-right: 10px" ></i></a> <!--                Món ăn được thêm -->
-             <!--   Sữa chua không đường (100Kcal)
-            </!--div>
-            <!--div class="dinner">
+                <a href="indexUser.php"><i class="fas fa-plus-circle" style="margin-left: 10px; margin-right: 10px"></i></a>
+                <!--                Món ăn được thêm -->
+                Sữa chua không đường (100Kcal)
+            </div>
+            <div class="dinner" style="display: flex">
                 Bữa tối
-                <a href="indexUser.php" ><i class=" fas fa-plus-circle"style="margin-left: 10px; margin-right: 10px" ></i></a><!--                Món ăn được thêm -->
-             
-            </!--div>
+                <a href="indexUser.php"><i class="fas fa-plus-circle" style="margin-left: 10px; margin-right: 10px"></i></a>
+                <!--                Món ăn được thêm -->
+                Salad (300Kcal); Ức gà (200Kcal)
+            </div>
 
         </div>
         <div class="aim">Mục Tiêu</div>
@@ -236,11 +163,7 @@ if ($result->num_rows > 0){
     <div class="w3-col body-right" style="width: 20%; height: 970px"></div>
 
 </div>
-<script type="text/javascript">
-      function getBack(){
-          history.back();
-      }
-</script>
+
 </body>
 
 </html>

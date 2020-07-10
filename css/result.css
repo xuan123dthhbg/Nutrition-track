@@ -47,7 +47,7 @@ body {
   .result-mess {
     font-style: italic; 
     font-size: 20px;
-    margin: 80px;
+    margin: 50px;
     margin-left: 50px;
     color: rgb(67, 170, 107);
   }
@@ -77,14 +77,7 @@ body {
     background-size: cover;
      
   }
-  .img-2 {
-    margin: 20px;
-    height: 150px;
-    width: 220px;
-    background-image: url(../img/watermelon.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+ 
 
   .infor {
       margin: auto;

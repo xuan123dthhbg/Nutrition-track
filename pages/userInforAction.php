@@ -21,17 +21,17 @@ $sql3 = $conn->query( $infor);
 
 
 if ($sql3){
-    header('Location: indexUser.php');
+    header('Location: login.php');
   //  $sql="SELECT height,weight,age,activity_level,sex FROM member WHERE  ten_dang_nhap='$username'";
 
     // $result = $conn->query($sql);
-
+/*
     $_SESSION['weight'] = $weight;
     $_SESSION['height'] = $height;
   
     $_SESSION['age'] = $age;
     $_SESSION['activity_level'] =$level_act;
-    $_SESSION['sex']=$sex;
+    $_SESSION['sex']=$sex;*/
    // echo $username;
 //echo "thành công . <a href='profile.php'>Tiếp tục</a>";
 }

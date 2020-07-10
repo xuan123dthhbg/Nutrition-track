@@ -1,4 +1,22 @@
-<?php session_start(); ?>
+<?php session_start(); 
+require 'db_connection.php';
+
+$ten_dang_nhap =$_SESSION['ten_dang_nhap_2'];
+
+$sql="SELECT id FROM member WHERE ten_dang_nhap like '%$ten_dang_nhap%'";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0)
+{
+    While( $row = $result -> fetch_array()){
+        $id=$row["id"];
+    }
+}
+$_SESSION['idd']=$id;
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,13 +46,13 @@
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
              
               <li class="nav-item ">
-                <a class="nav-link active btn " href="#">Giới thiệu  </a>
+                <a class="nav-link active btn " href="about.php">Giới thiệu  </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active btn" href="profile.php">
-                    <div class=" d-flex ">
+              <a class="nav-link active btn " href="profile.php"> 
+                <div class=" d-flex ">
                        <div style="margin-top :-10px" >
-                        <img
+                       <img
                           class="rounded-circle"
                            alt="Cinque Terre"
                            src="../img/avatar.png"
@@ -43,15 +61,15 @@
                          />
                        </div>
                        <div  style="margin-left :5px">
-                       <?php 
-                        if (isset($_SESSION['ten_dang_nhap_1'])){
-                            echo $_SESSION['ten_dang_nhap_1']."<br/>";}
-                       // if (isset($_SESSION['ten_dang_nhap_2'])){
-                       //     echo $_SESSION['ten_dang_nhap_2']."<br/>";} 
-           ?>
+                    <?php 
+                      if (isset($_SESSION['ten_dang_nhap_2'])){
+                                   echo $_SESSION['ten_dang_nhap_2']."<br/>";
+                      }   
+                   ?>
+                        
                         </div>
                     </div>
-                 </a>
+               </a>
                 </li>
                 <li class="nav-item ">
                 <a class="nav-link active btn " href="../index.php">Đăng xuất  </a>
@@ -63,7 +81,7 @@
     <div class="home">
         <div class="home-header"></div>
         
-        <form action="result.php" method="post" class="search-pos" >
+        <form action="resultDn.php" method="post" class="search-pos" >
             <div class="search-bar">
              <input type="text" placeholder="Tìm kiếm"  class="search"  name="searcht">
             

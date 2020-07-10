@@ -92,6 +92,11 @@ body {
     margin: 30px;
     border-bottom: #1c7430 2px solid;
 }
+.addFood{
+    margin-left: 120px;
+   
+    margin-top: 5px;
+}
 .user-aim {
     position: relative;
     font-size: 20px;

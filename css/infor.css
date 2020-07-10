@@ -52,22 +52,28 @@ body {
 .search-pos {
     height: 100px;
     width: 100%;
+    margin-right: 170px;
+    margin-top: 10px;
 }
 .search-bar {
     margin: auto;
-    width: 750px;
+    width: 650px;
+  
 }
 .search {
-    width: 500px;
+    width: 450px;
     padding: 10px;
     border-radius: 20px;
     font-size: 20px;
+    margin-top: 30px;
+    height: 40px;
   }
   .search-icon {
       background-color: rgb(207, 221, 79);
-      height: 55px;
+      height: 35px;
       border-radius: 8px;
       font-size: 20px;
+      margin-bottom: 15px;
   }
 
   .search-icon:hover{
@@ -186,4 +192,8 @@ body {
     height: auto;
     width:auto;
    
+}
+.addFood{
+  margin-top: 60px;
+  
 }
