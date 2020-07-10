@@ -41,7 +41,7 @@ if ($result->num_rows > 0){
                 <a class="nav-link active btn " href="indexUser.php">Trang chủ  </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link active btn " href="#">Giới thiệu  </a>
+                <a class="nav-link active btn " href="./about.html">Giới thiệu  </a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link active btn" href="../index.php"> Đăng xuất  </a>

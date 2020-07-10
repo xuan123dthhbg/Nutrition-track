@@ -84,6 +84,10 @@
                     <td> Nguy hiểm</td>
                 </tr>
             </table>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b15ad174113f24b4012ca49c8b777567aaffeb4
           </p>
         </div>
     </div>
@@ -99,4 +103,8 @@
         </div>
     </div>
 </body>
+<<<<<<< HEAD
 </html> 
+=======
+</html>
+>>>>>>> 4b15ad174113f24b4012ca49c8b777567aaffeb4

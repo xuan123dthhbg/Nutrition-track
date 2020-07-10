@@ -19,6 +19,7 @@ require 'db_connection.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông tin dinh dưỡng</title>
+    <!-- <link rel="stylesheet" href="C:\xampp\htdocs\Nutrition-track\css\infor.css" -->
     <link rel="stylesheet" href="../css/infor.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -70,33 +71,43 @@ require 'db_connection.php';
             <div class="food-img" style="background-image: url(<?php echo $row['URL'] ?>);" >
         </div>
             <div class="food-name"><?php echo $row["Tenmon"] ?> </div>
+            
         </div><br><br>
-
+        <div class="addFood" style="display:flex; justify-content: center;align-items:center;">  
+            <div style="font-size: 20px; text-align:center; font-weight: 500">Thêm vào nhật ký?</div>
+            <div style="margin-left: 20px">
+                <select name="time" style="font-size: 20px; font-weight: 300, margin-left: 10px">
+                        <option value="breakfast">Bữa sáng</option>
+                        <option value="lunch">Bữa trưa</option>
+                        <option value="snack">Bữa chiều</option>
+                        <option value="dinner">Bữa tối</option>
+                </select>
+            </div>            
+        </div>
         <div class="infor">
             <div class="nutrition">
                 <div class="mess-title">Thông tin dinh dưỡng trong 100g</div>
                 
                 <div class="nutrition-facts">
                     <div class="calories">Giá trị dinh dưỡng </div>
-                        <div  >
-                        <table class="w3-table w3-bordered w3-hoverable">
-                       
-                       
-                     <?php 
-                    
-                     echo 
-                     '<tr>'.'<td>'."Calories:".'</td>'.'<td>'. $row["Calories/100g"]." g".'</td>'.'</tr>'.
-                     '<tr>'.'<td>'."Total Fat :".'</td>'.'<td>'. $row["TotalFat(g)"] ." g".'</td>'.'</tr>'.
-                     '<tr>'.'<td>'."Cholesterol:".'</td>'.'<td>'. $row["Cholesterol(mg)"] ." mg".'</td>'.'</tr>'.
-                     '<tr>'.'<td>'."Sodium :".'</td>'.'<td>'. $row["Sodium(g)"] ." g".'</td>'.'</tr>'.
-                     '<tr>'.'<td>'."Total Carbohydrates :".'</td>'.'<td>'. $row["TotalCarbohydrates"] ." g".'</td>'.'</tr>'.
-                     '<tr>'.'<td>'. "Protein:".'</td>'.'<td>'.$row["Protein(g)"] ." g"
-                     .'</td>'.'</tr>'
-                              ?>
                         
+                        <table class="w3-table w3-bordered w3-hoverable">
+                            <?php 
+                            echo 
+                            '<tr>'.'<td>'."Calories:".'</td>'.'<td>'. $row["Calories/100g"]." g".'</td>'.'</tr>'.
+                            '<tr>'.'<td>'."Total Fat :".'</td>'.'<td>'. $row["TotalFat(g)"] ." g".'</td>'.'</tr>'.
+                            '<tr>'.'<td>'."Cholesterol:".'</td>'.'<td>'. $row["Cholesterol(mg)"] ." mg".'</td>'.'</tr>'.
+                            '<tr>'.'<td>'."Sodium :".'</td>'.'<td>'. $row["Sodium(g)"] ." g".'</td>'.'</tr>'.
+                            '<tr>'.'<td>'."Total Carbohydrates :".'</td>'.'<td>'. $row["TotalCarbohydrates"] ." g".'</td>'.'</tr>'.
+                            '<tr>'.'<td>'. "Protein:".'</td>'.'<td>'.$row["Protein(g)"] ." g"
+                            .'</td>'.'</tr>'
+                            ?>
                         </table>
                       
+                    
                     </div>
+                <div class="chart">
+                    
                     
                 </div>
                 <div class="chart">
@@ -107,7 +118,6 @@ require 'db_connection.php';
             </div>
             
             <div class="activities">
-            
                 <div class="activities-title">Hoạt động cần thiết để tiêu hao 100KCal</div>
                 <table class="activities">
                 
@@ -121,17 +131,20 @@ require 'db_connection.php';
                         <th class="dohousehold-box">
                             <div class="dohousehold"></div>
                         </th>
+                    </tr>
                     <tr>
                         <td>
-                            <div style="font-size: 70px; font-weight: bold;">5</div> <br>
+                            <div style="font-size: 70px; font-weight: bold;"><?php $chay=$row["Calories/100g"]/9.5;echo round($chay,2)?></div> <br>
                             <div style="font-weight: bold; font-size: 25px;">Đạp xe</div>
                         </td>
                         <td>
-                            <div style="font-size: 70px; font-weight: bold;">5</div> <br>
+                            <div style="font-size: 70px; font-weight: bold;"><?php  $dibo=$row["Calories/100g"]/3.5;
+                                    echo round($dibo,2);
+                             ?></div> <br>
                             <div style="font-weight: bold; font-size: 25px;">Chạy bộ</div>
                         </td>
                         <td>
-                            <div style="font-size: 70px; font-weight: bold;">5</div> <br>
+                            <div style="font-size: 70px; font-weight: bold;"><?php $v=$row["Calories/100g"]/5.5;echo round($v,2)?></div> <br>
                             <div style="font-weight: bold; font-size: 25px;">Làm việc nhà</div>
                         </td>
                     </tr>
@@ -158,6 +171,8 @@ require 'db_connection.php';
             </div>
            
             <div class="chart" >
+                <p class="mess-title">Biểu Đồ</p>
+                <div id ="chart_div"></div>
                 <!--Load the AJAX API-->
                 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
      <script type="text/javascript">
@@ -189,6 +204,7 @@ require 'db_connection.php';
       }
     </script>
             </div>
+
         </div>
     </div>
     
